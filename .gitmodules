@@ -1,5 +1,5 @@
-[submodule "content/themes/froyo"]
-	path = content/themes/froyo
+[submodule "content/themes/froyo-ghost-theme"]
+	path = content/themes/froyo-ghost-theme
 	url =https://github.com/valiantvu/froyo-ghost-theme 
 
 [submodule "content/themes/casper"]
