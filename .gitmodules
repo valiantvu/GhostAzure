@@ -1,3 +1,8 @@
 [submodule "content/themes/froyo"]
 	path = content/themes/froyo
 	url =https://github.com/valiantvu/froyo-ghost-theme 
+
+[submodule "content/themes/casper"]
+    path = content/themes/casper
+    url =https://github.com/TryGhost/casper
+
