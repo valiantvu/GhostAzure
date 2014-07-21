@@ -15,7 +15,11 @@ Author URI: http://www.estudiopatagon.com
 
 @font-face {
     font-family: 'Verdana';
-
+/*    src: url('../fonts/Verdana-webfont.eot');
+    src: url('../fonts/Verdana-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Verdana-webfont.svg#Verdanaregular') format('svg'),
+		 url('../fonts/Verdana-webfont.woff') format('woff'),
+         url('../fonts/Verdana-webfont.ttf') format('truetype');*/
     font-weight: normal;
     font-style: normal;
 }
