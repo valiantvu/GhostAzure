@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]><html class="ie7"><![endif]-->  
+<!--[if IE 8]><html class="ie8"><![endif]-->  
+<!--[if IE 9]><html class="ie9"><![endif]-->  
+<!--[if !IE]><!--><html><!--<![endif]-->  
+<head>
+{{! Document Settings }}
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+{{! Page Meta }}
+<title>{{meta_title}}</title>
+<meta name="description" content="{{meta_description}}" />
+
+{{! Mobile Support }}
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+{{! Styles'n'Scripts }}
+<link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+<link rel="stylesheet" type="text/css" href="{{asset "css/animate.min.css"}}">
+<link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.min.css"}}">
+<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}">
+<link rel="stylesheet" type="text/css" href="{{asset "css/responsive.css"}}">
+<link rel="stylesheet" type="text/css" href="{{asset "css/main-color.css"}}">
+<link rel="stylesheet" type="text/css" href="{{asset "js/fancybox/jquery.fancybox.css"}}">
+<link rel="stylesheet" type="text/css" href="{{asset "js/fancybox/helpers/jquery.fancybox-buttons.css"}}">
+<link rel="stylesheet" type="text/css" href="{{asset "css/prettify-bootstrap.css"}}">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+{{ghost_head}}
+
+</head>
+<body class="enable_animations {{body_class}}" {{#if @blog.cover}}style="background: url({{@blog.cover}}) no-repeat center center fixed;"{{/if}}>
+	{{! Mobile menu. Note: The nav links are the same of #header > .main-nav, just check out assets/js/global.js }}
+	<nav class="mobile nav" role="navigation"></nav>
+	<div class="overlay mobile"></div>
+	<!-- start: #wrapper -->
+	<div id="wrapper">
+	
+		<!-- start: #header -->
+		<header id="header" class="center">
+			<hgroup>
+				{{#if @blog.logo}}
+					<h1 class="logo" ><a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a></h1>
+				{{else}}
+					<h1 class="logo"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+				{{/if}}
+				<h2 class="blog-description">{{@blog.description}}</h2>
+			</hgroup>
+			<!-- start: .main-nav -->
+            <nav class="main-nav" role="navigation">
+            	<ul>
+					<li><a href="{{@blog.url}}">Home</a></li>
+					<li><a href="{{@blog.url}}/about">About Us</a></li>
+					<li><a href="{{@blog.url}}/gallery">Gallery</a></li>
+					<li><a href="{{@blog.url}}/contact">Contact Me</a></li>
+				</ul>
+            </nav>
+            <!-- end: .main-nav -->
+            <div class="mobile selector"><i class="fa fa-bars"></i></div>
+			<div class="clear"></div>
+		</header>
+		<!-- end: #header -->
+		
+        {{{body}}}
+		
+		<!-- start: #footer -->
+		<footer id="footer">
+			<div class="center">
+				{{#if @blog.logo}}
+					<h2 class="logo" ><a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a></h2>
+				{{else}}
+					<h2 class="logo"><a href="{{@blog.url}}">{{@blog.title}}</a></h2>
+				{{/if}}
+				<h4 class="blog-description">{{@blog.description}}</h4>
+				<ul class="social">
+					<li><a href="{{@blog.url}}/rss" target="_blank">RSS</a></li>
+					<li><a href="#" target="_blank">• Facebook</a></li>
+					<li><a href="#" target="_blank">• Twitter</a></li>
+					<li><a href="#" target="_blank">• Pinterest</a></li>
+				</ul>
+			</div>
+		</footer>
+		<!-- end: #footer -->
+		
+    </div>
+    <!-- end: #wrapper -->
+	<a href="#" id="back-to-top"><i class="fa fa-arrow-up"></i></a>
+    {{ghost_foot}}
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/jquery.appear.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/jquery.sticky.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/google-code-prettify/prettify.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/fancybox/jquery.fancybox.pack.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/fancybox/helpers/jquery.fancybox-buttons.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/global.js"}}"></script>
+</body>
+</html>
