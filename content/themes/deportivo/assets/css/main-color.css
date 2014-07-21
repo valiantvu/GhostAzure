@@ -1,0 +1,59 @@
+/* @group Main Colors */
+
+/*
+Main elements
+Color scheme: Dark blue
+Default: #33485E
+*/
+
+body,
+a,
+#header h1.logo a,
+#sidebar section.widget h4.widget-title,
+div#gallery a:after,
+#footer div.social h4,
+#footer div.copyrights h2.logo a {
+	color: #33485E;	
+}
+
+div.home div.articles article div.bottom time,
+div.single article header div.meta time,
+#sidebar section.widget.author,
+div.single div#disqus_thread,
+nav.mobile,
+#footer div.social ul li a{
+	background: #33485E;
+}
+
+/*
+Secondary elements
+Color scheme: Yellow
+Default: #F29B12
+*/
+
+#header h1.logo a span,
+#footer div.copyrights h2.logo a span,
+.post-content a,
+#header nav ul li a span {
+	color: #F29B12;	
+}
+
+#back-to-top,
+div.home div.articles article .post-excerpt p.textcenter a.readmore{
+	background: #F29B12;	
+}
+
+/*
+Titles and hovered links
+Color scheme: Green
+Default: #159F85
+*/
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+div.single article header h2,
+.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6,
+.post-content a:hover{
+	color: #159F85;	
+}
+
+/* @end */

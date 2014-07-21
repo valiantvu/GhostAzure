@@ -6,3 +6,6 @@
     path = content/themes/casper
     url =https://github.com/TryGhost/casper
 
+[submodule "content/themes/deportivo"]
+    path = content/themes/deportivo
+    url =https://github.com/TryGhost/casper

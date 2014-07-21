@@ -1,0 +1,54 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+<main class="content center" role="main">
+	<!-- start: .home -->
+	<div class="home">
+		<!-- start: .articles-->
+		<div class="articles">
+			<h2>
+				<i>. . .</i>
+				<span>{{tag.name}}</span>
+				<i>. . .</i>
+			</h2>
+			{{#foreach posts columns=3}}
+			
+				<article class="animated opacity0 {{post_class}} {{#if @rowEnd}}ep-last{{/if}}" data-animation="fadeInUp" data-appear-top-offset="-200">
+					<div class="fix">
+						<header>
+							<a href="{{url}}" class="thumb">{{content characters="0"}}</a>
+						</header>
+						<div class="bottom">
+							<time datetime="{{date format="YYYY-MM-DD"}}">
+								{{date format='MMM'}}
+								<span class="month">{{date format='DD'}}</span>
+							</time>
+							<p class="tags">
+								<span>{{tags}}</span>
+							</p>
+							<h3 class="post-title"><a href="{{url}}">{{{title}}}</a></h3>
+							<section class="post-excerpt">
+								<p>{{excerpt words="40"}}&hellip;</p>
+								<p class="textcenter"><a href="{{url}}" class="readmore">VIEW ARTICLE »</a></p>
+								<div class="clear10"></div>
+							</section>
+						
+						</div>
+						<div class="clear"></div>
+					</div>
+				</article>
+				
+				{{#if @rowEnd}}<div class="clear desktop"></div>{{/if}}
+				
+			{{/foreach}}
+			<div class="clear40"></div>
+		</div>
+		<!-- end: .articles -->
+		
+		{{pagination}}
+		
+	</div>
+	<!-- end: .home -->
+</main>
